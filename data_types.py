@@ -238,3 +238,98 @@ single_quote_str = 'Hello, World!'
 double_quote_str = "Python is awesome!"
 print(single_quote_str)
 print(double_quote_str)
+
+#length of string
+str1 = "Hello"
+print(len(str1)) #5
+str2 = "Python Programming"
+print(len(str2)) #18
+
+#indexing
+#it is to get position of character in string
+sample_str = "Python"
+print(sample_str[0])  #P
+print(sample_str[3])  #h
+print(sample_str[2])  #n
+print(sample_str[4])  #IndexError: string index out of range
+#indexing starts from 0
+
+first_char = sample_str[0]
+second_char = sample_str[1]
+third_char = sample_str[2]  
+fourth_char = sample_str[3]
+last_char = sample_str[4]
+print(first_char)  #P
+print(second_char) #y
+print(third_char)  #t
+print(fourth_char) #h
+print(last_char)   #n
+#last index is length-1
+#P -- 0
+#y -- 1
+#t -- 2
+#h -- 3
+#o -- 4
+#n -- 5
+
+#negative indexing
+print(sample_str[-1]) #n
+print(sample_str[-3]) #h
+print(sample_str[-6]) #P
+#-1 refers to last character
+first_char_neg = sample_str[-6]
+second_char_neg = sample_str[-5]
+third_char_neg = sample_str[-4]
+fourth_char_neg = sample_str[-3]
+last_char_neg = sample_str[-1]
+print(first_char_neg)  #P
+print(second_char_neg) #y
+print(third_char_neg)  #t
+print(fourth_char_neg) #h
+print(last_char_neg)   #n
+
+#P -- 0 -- -6
+#y -- 1 -- -5
+#t -- 2 -- -4
+#h -- 3 -- -3
+#o -- 4 -- -2
+#n -- 5 -- -1
+
+#changin case of string
+text = "Hello, World!"
+print(text.upper()) #HELLO, WORLD! upper case
+print(text.lower()) #hello, world! lower case
+print(text.capitalize()) #Hello, world! first letter capitalized
+print(text.title()) #Hello, World! first letter of each word capitalized
+
+#removing whitespace
+text_with_spaces = "   Hello, Python!   "
+stripped_text = text_with_spaces.strip()
+print(stripped_text) #"Hello, Python!" without leading/trailing spaces
+
+#removing leading whitespace
+leading_stripped = text_with_spaces.lstrip()
+print(leading_stripped) #"Hello, Python!   " without leading spaces     
+
+#removing trailing whitespace
+trailing_stripped = text_with_spaces.rstrip()
+print(trailing_stripped) #"   Hello, Python!" without trailing spaces   
+
+#finding substrings
+main_str = "Hello, Hello welcome to Python programming."
+#finding first occurrence of substring
+#case-sensitive
+#return -1 if not found
+
+index = main_str.find("Python")
+print(index) #18 
+index_not_found = main_str.find("Java")
+print(index_not_found) #-1
+
+#replacing substrings
+#it need 2 parameters: old substring and new substring
+#replacing all occurrences of a substring with another substring
+original_str = "I like apples. Apples are my favorite fruit."
+#case-sensitive
+new_str = original_str.replace("apples", "oranges")
+print(new_str) #"I like oranges. Apples are my favorite fruit."
