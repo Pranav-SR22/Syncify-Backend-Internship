@@ -333,3 +333,126 @@ original_str = "I like apples. Apples are my favorite fruit."
 #case-sensitive
 new_str = original_str.replace("apples", "oranges")
 print(new_str) #"I like oranges. Apples are my favorite fruit."
+
+#5 bucket
+#bucket 5.1
+#check if all characters are alphabetic
+str_alpha = "HelloWorld"
+print(str_alpha.isalpha()) #True
+str_alpha_num = "Hello123"
+print(str_alpha_num.isalpha()) #False
+print("Hello World".isalpha()) #False (space is not alphabetic)
+
+#check if all characters are numeric
+str_numeric = "12345"
+print(str_numeric.isdigit()) #True
+str_mixed = "123abc"
+print(str_mixed.isdigit()) #False
+print("5 bucket".isdigit()) #False
+
+#check if all characters are alphanumeric (letters and numbers only no special characters)
+#returns True if all characters are alphanumeric and there is at least one character
+#otherwise False
+#returns False for empty string
+str_alnum = "Hello123"
+print(str_alnum.isalnum()) #True
+str_special = "Hello@123"
+print(str_special.isalnum()) #False
+print("5bucket".isalnum()) #True
+
+#bucket 5.2
+#isupper() method and islower() method
+upper_str = "HELLO"
+lower_str = "hello"
+mixed_str = "Hello"
+print(upper_str.isupper()) #True
+print(lower_str.islower()) #True
+print(mixed_str.isupper()) #False
+print(mixed_str.islower()) #False
+print("5BUCKET".isupper()) #True
+print("5bucket".islower()) #True
+#special example
+special_str = "HELLO123!"
+print(special_str.isupper()) #True (numbers and special characters are ignored)
+special_str2 = "hello@world"
+print(special_str2.islower()) #True (numbers and special characters are ignored)
+
+
+#isspace() method
+space_str = "   "
+non_space_str = " Hello "
+empty_str = ""
+print(space_str.isspace()) #True
+print(non_space_str.isspace()) #False
+print(empty_str.isspace()) #False
+print(" \t\n".isspace()) #True (contains only whitespace characters)
+
+#bucket 6
+
+#6.1
+#splitting strings
+#when we split a string, it returns a list of substrings
+#when there  is no separator specified, !!!!!!!!!!!!!!! it splits on whitespace by default !!!!!!!!!!!!!!!!!!!
+
+sentence = "Python is a great programming language"
+words = sentence.split() #splitting on whitespace
+print(words) #['Python', 'is', 'a', 'great', 'programming', 'language'] 
+
+#splitting with a specific separator
+csv_data = " apple,bananacherry,date"
+fruits = csv_data.split(",") #splitting on comma
+print(fruits) #['apple', 'banana', 'cherry', 'date']    
+
+data = "one;two;three;four;five"
+items = data.split(";") #splitting on semicolon
+print(items) #['one', 'two', 'three', 'four', 'five']
+
+#6.2
+#joining strings
+#when we join a list of strings, it combines them into a single string with a specified separator
+#we can specify any string as separator
+#it does not add space by default
+
+words_list = ['Python', 'is', 'fun']
+sentence_joined = " ".join(words_list) #joining with space as separator write the joiner string in double quotes in front of join function
+print(sentence_joined) #"Python is fun"
+csv_joined = ",".join(fruits) #joining with comma as separator
+print(csv_joined) #"apple,banana,cherry,date"
+semicolon_joined = ">>>>>".join(items) #joining with semicolon as separator
+print(semicolon_joined) #"one;two;three;four;five"
+
+#joining without any separator
+no_space_joined = "".join(words_list) #joining without any separator
+print(no_space_joined) #"Pythonisfun"
+
+
+#bucket 7
+
+#starting and ending substrings
+
+main_string = "Hello, welcome to Python programming."
+
+#check if string starts with a substring
+
+print(main_string.startswith("Hello")) #True
+print(main_string.startswith("welcome")) #False
+
+#check if string ends with a substring
+
+print(main_string.endswith("programming.")) #True
+print(main_string.endswith("Python")) #False
+
+#bucket 8
+#counting occurrences of a substring
+#it counts number of times a substring appears in the string
+#case-sensitive
+#non-overlapping occurrences are counted
+text = "banana"
+count_a = text.count("a")
+print(count_a) #3
+text2 = "Python programming in Python is fun"
+count_python = text2.count("Python")
+print(count_python) #2
+count_java = text2.count("Java")
+print(count_java) #0
+
