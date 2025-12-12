@@ -456,3 +456,76 @@ print(count_python) #2
 count_java = text2.count("Java")
 print(count_java) #0
 
+
+
+#slicing strings
+#syntax: string[start:end:step]
+#string is cake 
+cake = "Chocolate Cake"
+#extracting substring "Chocolate"
+substr1 = cake[0:9] #from index 0 to 8
+print(substr1) #"Chocolate"
+#extracting substring "Cake"
+substr2 = cake[10:14] #from index 10 to 13
+print(substr2) #"Cake"
+#last index not included
+substr3 = cake[:9] #from start to index 8
+print(substr3) #"Chocolate"
+substr4 = cake[10:] #from index 10 to end
+print(substr4) #"Cake"
+substr5 = cake[:] #entire string
+print(substr5) #"Chocolate Cake"
+#default start is 0 and default end is length of string
+
+#negative indexing in slicing
+string = "Programming"
+substr_neg1 = string[-11:-6] #from index -11 to -7
+print(substr_neg1) #"Progr"
+substr_neg2 = string[-5:-6] #from index -5 to -7
+print(substr_neg2) #"" (empty string, as -5 is greater than -6)
+substr_neg3 = string[-11:] #entire string
+print(substr_neg3) #"Programming"
+substr_neg4 = string[:-6] #from start to index -7
+print(substr_neg4) #"Program"   
+
+#concatenation of strings
+str1 = "Hello,"
+str2 = "World!"
+greeting = str1 + " " + str2
+print(greeting) #"Hello, World!"
+
+#repetition of strings
+word = "Ha"
+laughter = word * 3
+print(laughter) #"HaHaHa"
+
+#string with number
+age = 25
+#error: can't concatenate str and int
+# message = "I am " + age + " years old." type error
+# print(message)
+#correct way using str() to convert int to str
+#solution 1
+message = "I am " + str(age) + " years old."
+print(message) #"I am 25 years old."
+
+#solution 2 using comma in print function
+print("I am", age, "years old.") #"I am 25 years old."
+
+#solution 3 using f-strings (formatted string literals)
+message_fstring = f"I am {age} years {25} old."
+print(message_fstring) #"I am 25 years old."
+
+#email example
+username = "pranav"
+domain = "example.com"
+email = username + "@" + domain
+print(email) #"
+
+#using f-strings
+email_fstring = f"{username}@{domain}"
+print(email_fstring) #"
+
+
+name = "John"
+mobile = 1234567890
